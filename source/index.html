@@ -11,8 +11,15 @@
 <body class="page__body">
   <header class="page__header header">
     <a class="header__logo logo logo--header" href="index.html" aria-current="page">
-      <img class="logo__image" src="https://imgholder.ru/33x38/68B738/ffffff&text=CAT+ENERGY" width="33" height="38" alt="">
-      <img class="logo__text" src="https://imgholder.ru/101x18/68B738/ffffff&text=CAT+ENERGY" width="101" height="18" alt="">
+      <picture>
+        <source media="(min-width: 1280px)" srcset="images/logo-l.svg" type="image/svg+xml">
+        <source media="(min-width: 768px)" srcset="images/logo-m.svg" type="image/svg+xml">
+        <img class="logo__image" src="images/logo-s.svg" width="34" height="38" alt="">
+      </picture>
+      <picture>
+        <source media="(min-width: 768px)" srcset="images/logo-text.svg" type="image/svg+xml">
+        <img class="logo__text" src="images/logo-text-additional.svg" width="101" height="18" alt="">
+      </picture>
       <span class="visually-hidden">Главная Кэт энерджи</span>
     </a>
     <nav class="header__nav nav">
@@ -38,7 +45,14 @@
         <h1 class="banner__title section-title">Функциональное питание для котов</h1>
         <p class="banner__text">Занялся собой? Займись котом!</p>
       </div>
-      <img class="banner__picture" src="https://imgholder.ru/280x370/68B738/ffffff&text=CAT+ENERGY" width="280" height="370" alt="«Кэт енерджи ПРО» с курицей.">
+      <picture>
+        <source srcset="images/banner-l@1x.webp, images/banner-l@2x.webp 2x" type="image/webp" media="(min-width: 1280px)">
+        <source srcset="images/banner-m@1x.webp, images/banner-m@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
+        <source srcset="images/banner-s@1x.webp, images/banner-s@2x.webp 2x" type="image/webp">
+        <source srcset="images/banner-l@1x.jpg, images/banner-l@2x.jpg 2x" type="image/jpg" media="(min-width: 1280px)">
+        <source srcset="images/banner-m@1x.jpg, images/banner-m@2x.jpg 2x" type="image/jpg" media="(min-width: 768px)">
+        <img class="banner__picture" src="images/banner-s@1x.jpg" srcset="images/map-s@2x.jpg 2x" width="280" height="370" loading="lazy" alt="«Кэт енерджи ПРО» с курицей.">
+      </picture>
       <a class="banner__link button" href="#">Подобрать программу</a>
     </section>
     <section class="modules">
@@ -94,10 +108,20 @@
         <figure class="compare__images">
           <figcaption class="visually-hidden">Сравнение внешнего вида кота до и после похудения</figcaption>
           <div class="compare__image compare__image--before">
-            <img class="compare__img" src="https://imgholder.ru/280x256/68B738/ffffff&text=CAT+ENERGY" width="280" height="256" alt="Кот до похудения.">
+            <picture>
+              <source srcset="images/cat-fat-m@1x.webp, /images/cat-fat-m@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
+              <source srcset="images/cat-fat-s@1x.webp, /images/cat-fat-s@2x.webp 2x" type="image/webp">
+              <source srcset="images/cat-fat-m@1x.png, /images/cat-fat-m@2x.png 2x" type="image/png" media="(min-width: 768px)">
+              <img class="compare__img" src="images/cat-fat-s@1x.png" srcset="images/cat-fat-s@2x.png 2x" width="280" height="370" loading="lazy" alt="Кот до похудения.">
+            </picture>
           </div>
           <div class="compare__image compare__image--after">
-            <img class="compare__img" src="https://imgholder.ru/280x256/68B738/ffffff&text=CAT+ENERGY" width="280" height="256" alt="Кот после похудения.">
+            <picture>
+              <source srcset="images/cat-skinny-m@1x.webp, /images/cat-skinny-m@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
+              <source srcset="images/cat-skinny-s@1x.webp, /images/cat-skinny-s@2x.webp 2x" type="image/webp">
+              <source srcset="images/cat-skinny-m@1x.png, /images/cat-skinny-m@2x.png 2x" type="image/png" media="(min-width: 768px)">
+              <img class="compare__img" src="images/cat-skinny-s@1x.png" srcset="images/cat-skinny-s@2x.png 2x" width="280" height="370" loading="lazy" alt="Кот после похудения.">
+            </picture>
           </div>
         </figure>
         <button class="compare__toggler" type="button">
@@ -112,13 +136,21 @@
         <p class="contact__city">Санкт-Петербург</p>
       </div>
       <div class="contact__map map">
-        <img class="map__img" src="https://imgholder.ru/320x362/68B738/ffffff&text=CAT+ENERGY" width="320" height="362" alt="Офис «Кэт енерджи» на карте.">
+        <picture>
+          <source srcset="images/map-l@1x.webp, img/map-l@2x.webp 2x" type="image/webp" media="(min-width: 1280px)">
+          <source srcset="images/map-m@1x.webp, img/map-m@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
+          <source srcset="images/map-s@1x.webp, img/map-s@2x.webp 2x" type="image/webp">
+          <source srcset="images/map-l@1x.jpg, img/map-l@2x.jpg 2x" type="image/jpg" media="(min-width: 1280px)">
+          <source srcset="images/map-m@1x.jpg, img/map-m@2x.jpg 2x" type="image/jpg" media="(min-width: 768px)">
+          <img class="map__img" src="images/map-s@1x.jpg" srcset="images/map-s@2x.jpg 2x" width="320" height="362" loading="lazy" alt="Офис «Кэт енерджи» на карте.">
+        </picture>
       </div>
     </section>
   </main>
   <footer class="page__footer footer">
     <a class="footer__item logo logo--footer" href="#" aria-current="page">
-      <img class="logo__text logo__text--footer" src="https://imgholder.ru/128x24/68B738/ffffff&text=CAT+ENERGY" width="128" height="24" alt="Логотип «Кэт энерджи».">
+      <img class="logo__text logo__text--footer" src="images/logo-text-additional.svg" width="128" height="24" alt="">
+      <span class="visually-hidden">Главная Кэт энерджи</span>
     </a>
     <section class="footer__item social">
       <h2 class="visually-hidden">Подписывайтесь на наши социальные сети</h2>
