@@ -1,0 +1,51 @@
+.features {
+  background-color: $bg-color-main;
+}
+
+.features__title {
+  margin-bottom: 40px;
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.features__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  background: linear-gradient(to bottom, $bg-color-accent 0, $bg-color-accent 100%) no-repeat left top / 60px 60px;
+
+  &::before {
+    content: "";
+
+    flex-shrink: 0;
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+
+    background-color: $bg-color-main;
+    mask: var(--icon) no-repeat center / 34px 34px;
+  }
+
+  &--leaf::before {
+    --icon: url("../../icons/stack.svg#leaf");
+  }
+
+  &--drink::before {
+    --icon: url("../../icons/stack.svg#tub");
+  }
+
+  &--food::before {
+    --icon: url("../../icons/stack.svg#eat");
+  }
+
+  &--weight::before {
+    --icon: url("../../icons/stack.svg#scales");
+  }
+}
