@@ -1,0 +1,21 @@
+.contact__content {
+  background-color: $bg-color-main;
+
+  &--inner {
+    background-color: $bg-color-darken;
+  }
+}
+
+.contact__title {
+  font-family: $accent-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $text-color-accent;
+}
+
+.contact__address {
+  font-size: 14px;
+  line-height: 20px;
+}

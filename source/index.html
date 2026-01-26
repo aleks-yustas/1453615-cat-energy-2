@@ -5,16 +5,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Главная | Кэт энерджи | HTML Academy</title>
-  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
 <body class="page__body">
   <header class="page__header header">
     <a class="header__logo logo logo--header" href="index.html" aria-current="page">
       <picture>
-        <source media="(min-width: 1280px)" srcset="images/logo-l.svg" type="image/svg+xml">
-        <source media="(min-width: 768px)" srcset="images/logo-m.svg" type="image/svg+xml">
-        <img class="logo__image" src="images/logo-s.svg" width="34" height="38" alt="">
+        <source media="(min-width: 1280px)" srcset="images/logo-desktop.svg" type="image/svg+xml">
+        <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" type="image/svg+xml">
+        <img class="logo__image" src="images/logo-mobile.svg" width="34" height="38" alt="">
       </picture>
       <picture>
         <source media="(min-width: 768px)" srcset="images/logo-text.svg" type="image/svg+xml">
@@ -42,16 +42,16 @@
   <main class="page__main">
     <section class="banner">
       <div class="banner__content">
-        <h1 class="banner__title section-title">Функциональное питание для котов</h1>
+        <h1 class="banner__title section-title section-title--contrast">Функциональное питание для котов</h1>
         <p class="banner__text">Занялся собой? Займись котом!</p>
       </div>
       <picture>
-        <source srcset="images/banner-l@1x.webp, images/banner-l@2x.webp 2x" type="image/webp" media="(min-width: 1280px)">
-        <source srcset="images/banner-m@1x.webp, images/banner-m@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
-        <source srcset="images/banner-s@1x.webp, images/banner-s@2x.webp 2x" type="image/webp">
-        <source srcset="images/banner-l@1x.jpg, images/banner-l@2x.jpg 2x" type="image/jpg" media="(min-width: 1280px)">
-        <source srcset="images/banner-m@1x.jpg, images/banner-m@2x.jpg 2x" type="image/jpg" media="(min-width: 768px)">
-        <img class="banner__picture" src="images/banner-s@1x.jpg" srcset="images/map-s@2x.jpg 2x" width="280" height="370" loading="lazy" alt="«Кэт енерджи ПРО» с курицей.">
+        <source srcset="images/banner-desktop@1x.webp, images/banner-desktop@2x.webp 2x" type="image/webp" media="(min-width: 1280px)">
+        <source srcset="images/banner-tablet@1x.webp, images/banner-tablet@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
+        <source srcset="images/banner-mobile@1x.webp, images/banner-mobile@2x.webp 2x" type="image/webp">
+        <source srcset="images/banner-desktop@1x.jpg, images/banner-desktop@2x.jpg 2x" type="image/jpg" media="(min-width: 1280px)">
+        <source srcset="images/banner-tablet@1x.jpg, images/banner-tablet@2x.jpg 2x" type="image/jpg" media="(min-width: 768px)">
+        <img class="banner__picture" src="images/banner-mobile@1x.jpg" srcset="images/map-mobile@2x.jpg 2x" width="280" height="270" loading="lazy" alt="«Кэт енерджи ПРО» с курицей.">
       </picture>
       <a class="banner__link button" href="#">Подобрать программу</a>
     </section>
@@ -109,18 +109,18 @@
           <figcaption class="visually-hidden">Сравнение внешнего вида кота до и после похудения</figcaption>
           <div class="compare__image compare__image--before">
             <picture>
-              <source srcset="images/cat-fat-m@1x.webp, /images/cat-fat-m@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
-              <source srcset="images/cat-fat-s@1x.webp, /images/cat-fat-s@2x.webp 2x" type="image/webp">
-              <source srcset="images/cat-fat-m@1x.png, /images/cat-fat-m@2x.png 2x" type="image/png" media="(min-width: 768px)">
-              <img class="compare__img" src="images/cat-fat-s@1x.png" srcset="images/cat-fat-s@2x.png 2x" width="280" height="370" loading="lazy" alt="Кот до похудения.">
+              <source srcset="images/cat-fat-tablet@1x.webp, images/cat-fat-tablet@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
+              <source srcset="images/cat-fat-mobile@1x.webp, images/cat-fat-mobile@2x.webp 2x" type="image/webp">
+              <source srcset="images/cat-fat-tablet@1x.png, images/cat-fat-tablet@2x.png 2x" type="image/png" media="(min-width: 768px)">
+              <img class="compare__img" src="images/cat-fat-mobile@1x.png" srcset="images/cat-fat-mobile@2x.png 2x" width="280" height="270" loading="lazy" alt="Кот до похудения.">
             </picture>
           </div>
           <div class="compare__image compare__image--after">
             <picture>
-              <source srcset="images/cat-skinny-m@1x.webp, /images/cat-skinny-m@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
-              <source srcset="images/cat-skinny-s@1x.webp, /images/cat-skinny-s@2x.webp 2x" type="image/webp">
-              <source srcset="images/cat-skinny-m@1x.png, /images/cat-skinny-m@2x.png 2x" type="image/png" media="(min-width: 768px)">
-              <img class="compare__img" src="images/cat-skinny-s@1x.png" srcset="images/cat-skinny-s@2x.png 2x" width="280" height="370" loading="lazy" alt="Кот после похудения.">
+              <source srcset="images/cat-skinny-tablet@1x.webp, images/cat-skinny-tablet@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
+              <source srcset="images/cat-skinny-mobile@1x.webp, images/cat-skinny-mobile@2x.webp 2x" type="image/webp">
+              <source srcset="images/cat-skinny-tablet@1x.png, images/cat-skinny-tablet@2x.png 2x" type="image/png" media="(min-width: 768px)">
+              <img class="compare__img" src="images/cat-skinny-mobile@1x.png" srcset="images/cat-skinny-mobile@2x.png 2x" width="280" height="270" loading="lazy" alt="Кот после похудения.">
             </picture>
           </div>
         </figure>
@@ -137,12 +137,12 @@
       </div>
       <div class="contact__map map">
         <picture>
-          <source srcset="images/map-l@1x.webp, img/map-l@2x.webp 2x" type="image/webp" media="(min-width: 1280px)">
-          <source srcset="images/map-m@1x.webp, img/map-m@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
-          <source srcset="images/map-s@1x.webp, img/map-s@2x.webp 2x" type="image/webp">
-          <source srcset="images/map-l@1x.jpg, img/map-l@2x.jpg 2x" type="image/jpg" media="(min-width: 1280px)">
-          <source srcset="images/map-m@1x.jpg, img/map-m@2x.jpg 2x" type="image/jpg" media="(min-width: 768px)">
-          <img class="map__img" src="images/map-s@1x.jpg" srcset="images/map-s@2x.jpg 2x" width="320" height="362" loading="lazy" alt="Офис «Кэт енерджи» на карте.">
+          <source srcset="images/map-desktop@1x.webp, images/map-desktop@2x.webp 2x" type="image/webp" media="(min-width: 1280px)">
+          <source srcset="images/map-tablet@1x.webp, images/map-tablet@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
+          <source srcset="images/map-mobile@1x.webp, images/map-mobile@2x.webp 2x" type="image/webp">
+          <source srcset="images/map-desktop@1x.jpg, images/map-desktop@2x.jpg 2x" type="image/jpg" media="(min-width: 1280px)">
+          <source srcset="images/map-tablet@1x.jpg, images/map-tablet@2x.jpg 2x" type="image/jpg" media="(min-width: 768px)">
+          <img class="map__img" src="images/map-mobile@1x.jpg" srcset="images/map-mobile@2x.jpg 2x" width="320" height="362" loading="lazy" alt="Офис «Кэт енерджи» на карте.">
         </picture>
       </div>
     </section>
@@ -176,7 +176,6 @@
       <span class="creators__text">HTML Academy</span>
     </a>
   </footer>
-  <script src="js/script.min.js" async></script>
 </body>
 
 </html>

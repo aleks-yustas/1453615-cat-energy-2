@@ -5,16 +5,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Каталог продукции | Кэт энерджи | HTML Academy</title>
-  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
 <body class="page__body">
   <header class="page__header header">
     <a class="header__logo logo logo--header" href="index.html" aria-label="Главная Кэт енерджи">
       <picture>
-        <source media="(min-width: 1280px)" srcset="images/logo-l.svg" type="image/svg+xml">
-        <source media="(min-width: 768px)" srcset="images/logo-m.svg" type="image/svg+xml">
-        <img class="logo__image" src="images/logo-s.svg" width="34" height="38" alt="">
+        <source media="(min-width: 1280px)" srcset="images/logo-desktop.svg" type="image/svg+xml">
+        <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" type="image/svg+xml">
+        <img class="logo__image" src="images/logo-mobile.svg" width="34" height="38" alt="">
       </picture>
       <picture>
         <source media="(min-width: 768px)" srcset="images/logo-text.svg" type="image/svg+xml">
@@ -49,24 +49,24 @@
           </h3>
           <a class="catalog-item__image" href="#" aria-label="Cat Energy PRO 500">
             <picture>
-              <source srcset="images/catalog/pro-chiken-500-m@1x.webp, /images/catalog/pro-chiken-500-m@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
-              <source srcset="images/catalog/pro-chiken-500-s@1x.webp, /images/catalog/pro-chiken-500-s@2x.webp 2x" type="image/webp">
-              <source srcset="images/catalog/pro-chiken-500-m@1x.png, /images/catalog/pro-chiken-500-m@2x.png 2x" type="image/png" media="(min-width: 768px)">
-              <img class="catalog-item__img" src="images/catalog/pro-chiken-500-s@1x.png" srcset="images/catalog/pro-chiken-500-s@2x.png 2x" width="140" height="107" loading="lazy" alt="">
+              <source srcset="images/catalog/pro-chiken-500-tablet@1x.webp, images/catalog/pro-chiken-500-tablet@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
+              <source srcset="images/catalog/pro-chiken-500-mobile@1x.webp, images/catalog/pro-chiken-500-mobile@2x.webp 2x" type="image/webp">
+              <source srcset="images/catalog/pro-chiken-500-tablet@1x.png, images/catalog/pro-chiken-500-tablet@2x.png 2x" type="image/png" media="(min-width: 768px)">
+              <img class="catalog-item__img" src="images/catalog/pro-chiken-500-mobile@1x.png" srcset="images/catalog/pro-chiken-500-mobile@2x.png 2x" width="140" height="107" loading="lazy" alt="">
             </picture>
           </a>
-          <dl class="catalog-item__parameters">
-            <div class="catalog-item__parameter">
-              <dt class="catalog-item__parameter-name">Масса</dt>
-              <dd class="catalog-item__parameter-value">500 г.</dd>
+          <dl class="catalog-item__parameters parameters-list">
+            <div class="parameters-list__item">
+              <dt class="parameters-list__name">Масса</dt>
+              <dd class="parameters-list__value">500 г.</dd>
             </div>
-            <div class="catalog-item__parameter">
-              <dt class="catalog-item__parameter-name">Вкус</dt>
-              <dd class="catalog-item__parameter-value">Курица</dd>
+            <div class="parameters-list__item">
+              <dt class="parameters-list__name">Вкус</dt>
+              <dd class="parameters-list__value">Курица</dd>
             </div>
-            <div class="catalog-item__parameter">
-              <dt class="catalog-item__parameter-name">Цена</dt>
-              <dd class="catalog-item__parameter-value">700 Р.</dd>
+            <div class="parameters-list__item">
+              <dt class="parameters-list__name">Цена</dt>
+              <dd class="parameters-list__value">700 Р.</dd>
             </div>
           </dl>
           <a class="catalog-item__action button" href="#">Заказать</a>
@@ -77,24 +77,24 @@
           </h3>
           <a class="catalog-item__image" href="#" aria-label="Cat Energy PRO 1000">
             <picture>
-              <source srcset="images/catalog/pro-chiken-1000-m@1x.webp, /images/catalog/pro-chiken-1000-m@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
-              <source srcset="images/catalog/pro-chiken-1000-s@1x.webp, /images/catalog/pro-chiken-1000-s@2x.webp 2x" type="image/webp">
-              <source srcset="images/catalog/pro-chiken-1000-m@1x.png, /images/catalog/pro-chiken-1000-m@2x.png 2x" type="image/png" media="(min-width: 768px)">
-              <img class="catalog-item__img" src="images/catalog/pro-chiken-1000-s@1x.png" srcset="images/catalog/pro-chiken-1000-s@2x.png 2x" width="140" height="107" loading="lazy" alt="">
+              <source srcset="images/catalog/pro-chiken-1000-tablet@1x.webp, images/catalog/pro-chiken-1000-tablet@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
+              <source srcset="images/catalog/pro-chiken-1000-mobile@1x.webp, images/catalog/pro-chiken-1000-mobile@2x.webp 2x" type="image/webp">
+              <source srcset="images/catalog/pro-chiken-1000-tablet@1x.png, images/catalog/pro-chiken-1000-tablet@2x.png 2x" type="image/png" media="(min-width: 768px)">
+              <img class="catalog-item__img" src="images/catalog/pro-chiken-1000-mobile@1x.png" srcset="images/catalog/pro-chiken-1000-mobile@2x.png 2x" width="140" height="107" loading="lazy" alt="">
             </picture>
           </a>
-          <dl class="catalog-item__parameters">
-            <div class="catalog-item__parameter">
-              <dt class="catalog-item__parameter-name">Масса</dt>
-              <dd class="catalog-item__parameter-value">1000 г.</dd>
+          <dl class="catalog-item__parameters parameters-list">
+            <div class="parameters-list__item">
+              <dt class="parameters-list__name">Масса</dt>
+              <dd class="parameters-list__value">1000 г.</dd>
             </div>
-            <div class="catalog-item__parameter">
-              <dt class="catalog-item__parameter-name">Вкус</dt>
-              <dd class="catalog-item__parameter-value">Курица</dd>
+            <div class="parameters-list__item">
+              <dt class="parameters-list__name">Вкус</dt>
+              <dd class="parameters-list__value">Курица</dd>
             </div>
-            <div class="catalog-item__parameter">
-              <dt class="catalog-item__parameter-name">Цена</dt>
-              <dd class="catalog-item__parameter-value">1000 Р.</dd>
+            <div class="parameters-list__item">
+              <dt class="parameters-list__name">Цена</dt>
+              <dd class="parameters-list__value">1000 Р.</dd>
             </div>
           </dl>
           <a class="catalog-item__action button" href="#">Заказать</a>
@@ -105,52 +105,52 @@
           </h3>
           <a class="catalog-item__image" href="#" aria-label="Cat Energy PRO 500">
             <picture>
-              <source srcset="images/catalog/pro-fish-500-m@1x.webp, /images/catalog/pro-fish-500-m@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
-              <source srcset="images/catalog/pro-fish-500-s@1x.webp, /images/catalog/pro-fish-500-s@2x.webp 2x" type="image/webp">
-              <source srcset="images/catalog/pro-fish-500-m@1x.png, /images/catalog/pro-fish-500-m@2x.png 2x" type="image/png" media="(min-width: 768px)">
-              <img class="catalog-item__img" src="images/catalog/pro-fish-500-s@1x.png" srcset="images/catalog/pro-fish-500-s@2x.png 2x" width="140" height="107" loading="lazy" alt="">
+              <source srcset="images/catalog/pro-fish-500-tablet@1x.webp, images/catalog/pro-fish-500-tablet@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
+              <source srcset="images/catalog/pro-fish-500-mobile@1x.webp, images/catalog/pro-fish-500-mobile@2x.webp 2x" type="image/webp">
+              <source srcset="images/catalog/pro-fish-500-tablet@1x.png, images/catalog/pro-fish-500-tablet@2x.png 2x" type="image/png" media="(min-width: 768px)">
+              <img class="catalog-item__img" src="images/catalog/pro-fish-500-mobile@1x.png" srcset="images/catalog/pro-fish-500-mobile@2x.png 2x" width="140" height="107" loading="lazy" alt="">
             </picture>
           </a>
-          <dl class="catalog-item__parameters">
-            <div class="catalog-item__parameter">
-              <dt class="catalog-item__parameter-name">Масса</dt>
-              <dd class="catalog-item__parameter-value">500 г.</dd>
+          <dl class="catalog-item__parameters parameters-list">
+            <div class="parameters-list__item">
+              <dt class="parameters-list__name">Масса</dt>
+              <dd class="parameters-list__value">500 г.</dd>
             </div>
-            <div class="catalog-item__parameter">
-              <dt class="catalog-item__parameter-name">Вкус</dt>
-              <dd class="catalog-item__parameter-value">Рыба</dd>
+            <div class="parameters-list__item">
+              <dt class="parameters-list__name">Вкус</dt>
+              <dd class="parameters-list__value">Рыба</dd>
             </div>
-            <div class="catalog-item__parameter">
-              <dt class="catalog-item__parameter-name">Цена</dt>
-              <dd class="catalog-item__parameter-value">700 Р.</dd>
+            <div class="parameters-list__item">
+              <dt class="parameters-list__name">Цена</dt>
+              <dd class="parameters-list__value">700 Р.</dd>
             </div>
           </dl>
           <a class="catalog-item__action button" href="#">Заказать</a>
         </li>
         <li class="catalog-list__item catalog-item">
           <h3 class="catalog-item__title">
-            <a class="catalog-item__link" href="#">&nbsp;г</a>
+            <a class="catalog-item__link" href="#">Cat Energy PRO 1000&nbsp;г</a>
           </h3>
           <a class="catalog-item__image" href="#" aria-label="Cat Energy PRO 1000">
             <picture>
-              <source srcset="images/catalog/pro-fish-1000-m@1x.webp, /images/catalog/pro-fish-1000-m@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
-              <source srcset="images/catalog/pro-fish-1000-s@1x.webp, /images/catalog/pro-fish-1000-s@2x.webp 2x" type="image/webp">
-              <source srcset="images/catalog/pro-fish-1000-m@1x.png, /images/catalog/pro-fish-1000-m@2x.png 2x" type="image/png" media="(min-width: 768px)">
-              <img class="catalog-item__img" src="images/catalog/pro-fish-1000-s@1x.png" srcset="images/catalog/pro-fish-1000-s@2x.png 2x" width="140" height="107" loading="lazy" alt="">
+              <source srcset="images/catalog/pro-fish-1000-tablet@1x.webp, images/catalog/pro-fish-1000-tablet@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
+              <source srcset="images/catalog/pro-fish-1000-mobile@1x.webp, images/catalog/pro-fish-1000-mobile@2x.webp 2x" type="image/webp">
+              <source srcset="images/catalog/pro-fish-1000-tablet@1x.png, images/catalog/pro-fish-1000-tablet@2x.png 2x" type="image/png" media="(min-width: 768px)">
+              <img class="catalog-item__img" src="images/catalog/pro-fish-1000-mobile@1x.png" srcset="images/catalog/pro-fish-1000-mobile@2x.png 2x" width="140" height="107" loading="lazy" alt="">
             </picture>
           </a>
-          <dl class="catalog-item__parameters">
-            <div class="catalog-item__parameter">
-              <dt class="catalog-item__parameter-name">Масса</dt>
-              <dd class="catalog-item__parameter-value">1000 г.</dd>
+          <dl class="catalog-item__parameters parameters-list">
+            <div class="parameters-list__item">
+              <dt class="parameters-list__name">Масса</dt>
+              <dd class="parameters-list__value">1000 г.</dd>
             </div>
-            <div class="catalog-item__parameter">
-              <dt class="catalog-item__parameter-name">Вкус</dt>
-              <dd class="catalog-item__parameter-value">Рыба</dd>
+            <div class="parameters-list__item">
+              <dt class="parameters-list__name">Вкус</dt>
+              <dd class="parameters-list__value">Рыба</dd>
             </div>
-            <div class="catalog-item__parameter">
-              <dt class="catalog-item__parameter-name">Цена</dt>
-              <dd class="catalog-item__parameter-value">1000 Р.</dd>
+            <div class="parameters-list__item">
+              <dt class="parameters-list__name">Цена</dt>
+              <dd class="parameters-list__value">1000 Р.</dd>
             </div>
           </dl>
           <a class="catalog-item__action button" href="#">Заказать</a>
@@ -161,24 +161,24 @@
           </h3>
           <a class="catalog-item__image" href="#" aria-label="Cat Energy Slim 500">
             <picture>
-              <source srcset="images/catalog/slim-buckwheat-500-m@1x.webp, /images/catalog/slim-buckwheat-500-m@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
-              <source srcset="images/catalog/slim-buckwheat-500-s@1x.webp, /images/catalog/slim-buckwheat-500-s@2x.webp 2x" type="image/webp">
-              <source srcset="images/catalog/slim-buckwheat-500-m@1x.png, /images/catalog/slim-buckwheat-500-m@2x.png 2x" type="image/png" media="(min-width: 768px)">
-              <img class="catalog-item__img" src="images/catalog/slim-buckwheat-500-s@1x.png" srcset="images/catalog/slim-buckwheat-500-s@2x.png 2x" width="140" height="107" loading="lazy" alt="">
+              <source srcset="images/catalog/slim-buckwheat-500-tablet@1x.webp, images/catalog/slim-buckwheat-500-tablet@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
+              <source srcset="images/catalog/slim-buckwheat-500-mobile@1x.webp, images/catalog/slim-buckwheat-500-mobile@2x.webp 2x" type="image/webp">
+              <source srcset="images/catalog/slim-buckwheat-500-tablet@1x.png, images/catalog/slim-buckwheat-500-tablet@2x.png 2x" type="image/png" media="(min-width: 768px)">
+              <img class="catalog-item__img" src="images/catalog/slim-buckwheat-500-mobile@1x.png" srcset="images/catalog/slim-buckwheat-500-mobile@2x.png 2x" width="140" height="107" loading="lazy" alt="">
             </picture>
           </a>
-          <dl class="catalog-item__parameters">
-            <div class="catalog-item__parameter">
-              <dt class="catalog-item__parameter-name">Масса</dt>
-              <dd class="catalog-item__parameter-value">500 г.</dd>
+          <dl class="catalog-item__parameters parameters-list">
+            <div class="parameters-list__item">
+              <dt class="parameters-list__name">Масса</dt>
+              <dd class="parameters-list__value">500 г.</dd>
             </div>
-            <div class="catalog-item__parameter">
-              <dt class="catalog-item__parameter-name">Вкус</dt>
-              <dd class="catalog-item__parameter-value">Гречка</dd>
+            <div class="parameters-list__item">
+              <dt class="parameters-list__name">Вкус</dt>
+              <dd class="parameters-list__value">Гречка</dd>
             </div>
-            <div class="catalog-item__parameter">
-              <dt class="catalog-item__parameter-name">Цена</dt>
-              <dd class="catalog-item__parameter-value">400 Р.</dd>
+            <div class="parameters-list__item">
+              <dt class="parameters-list__name">Цена</dt>
+              <dd class="parameters-list__value">400 Р.</dd>
             </div>
           </dl>
           <a class="catalog-item__action button" href="#">Заказать</a>
@@ -189,23 +189,23 @@
           </h3>
           <a class="catalog-item__image" href="#" aria-label="Cat Energy Slim 1000">
             <picture>
-              <source srcset="images/catalog/slim-buckwheat-1000-m@1x.webp, /images/catalog/slim-buckwheat-1000-m@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
-              <source srcset="images/catalog/slim-buckwheat-1000-s@1x.webp, /images/catalog/slim-buckwheat-1000-s@2x.webp 2x" type="image/webp">
-              <source srcset="images/catalog/slim-buckwheat-1000-m@1x.png, /images/catalog/slim-buckwheat-1000-m@2x.png 2x" type="image/png" media="(min-width: 768px)">
-              <img class="catalog-item__img" src="images/catalog/slim-buckwheat-1000-s@1x.png" srcset="images/catalog/slim-buckwheat-1000-s@2x.png 2x" width="140" height="107" loading="lazy" alt=""></picture>
+              <source srcset="images/catalog/slim-buckwheat-1000-tablet@1x.webp, images/catalog/slim-buckwheat-1000-tablet@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
+              <source srcset="images/catalog/slim-buckwheat-1000-mobile@1x.webp, images/catalog/slim-buckwheat-1000-mobile@2x.webp 2x" type="image/webp">
+              <source srcset="images/catalog/slim-buckwheat-1000-tablet@1x.png, images/catalog/slim-buckwheat-1000-tablet@2x.png 2x" type="image/png" media="(min-width: 768px)">
+              <img class="catalog-item__img" src="images/catalog/slim-buckwheat-1000-mobile@1x.png" srcset="images/catalog/slim-buckwheat-1000-mobile@2x.png 2x" width="140" height="107" loading="lazy" alt=""></picture>
           </a>
-          <dl class="catalog-item__parameters">
-            <div class="catalog-item__parameter">
-              <dt class="catalog-item__parameter-name">Масса</dt>
-              <dd class="catalog-item__parameter-value">1000 г.</dd>
+          <dl class="catalog-item__parameters parameters-list">
+            <div class="parameters-list__item">
+              <dt class="parameters-list__name">Масса</dt>
+              <dd class="parameters-list__value">1000 г.</dd>
             </div>
-            <div class="catalog-item__parameter">
-              <dt class="catalog-item__parameter-name">Вкус</dt>
-              <dd class="catalog-item__parameter-value">Гречка</dd>
+            <div class="parameters-list__item">
+              <dt class="parameters-list__name">Вкус</dt>
+              <dd class="parameters-list__value">Гречка</dd>
             </div>
-            <div class="catalog-item__parameter">
-              <dt class="catalog-item__parameter-name">Цена</dt>
-              <dd class="catalog-item__parameter-value">700 Р.</dd>
+            <div class="parameters-list__item">
+              <dt class="parameters-list__name">Цена</dt>
+              <dd class="parameters-list__value">700 Р.</dd>
             </div>
           </dl>
           <a class="catalog-item__action button" href="#">Заказать</a>
@@ -216,24 +216,24 @@
           </h3>
           <a class="catalog-item__image" href="#" aria-label="Cat Energy Slim 500">
             <picture>
-              <source srcset="images/catalog/slim-rice-500-m@1x.webp, /images/catalog/slim-rice-500-m@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
-              <source srcset="images/catalog/slim-rice-500-s@1x.webp, /images/catalog/slim-rice-500-s@2x.webp 2x" type="image/webp">
-              <source srcset="images/catalog/slim-rice-500-m@1x.png, /images/catalog/slim-rice-500-m@2x.png 2x" type="image/png" media="(min-width: 768px)">
-              <img class="catalog-item__img" src="images/catalog/slim-rice-500-s@1x.png" srcset="images/catalog/slim-rice-500-s@2x.png 2x" width="140" height="107" loading="lazy" alt="">
+              <source srcset="images/catalog/slim-rice-500-tablet@1x.webp, images/catalog/slim-rice-500-tablet@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
+              <source srcset="images/catalog/slim-rice-500-mobile@1x.webp, images/catalog/slim-rice-500-mobile@2x.webp 2x" type="image/webp">
+              <source srcset="images/catalog/slim-rice-500-tablet@1x.png, images/catalog/slim-rice-500-tablet@2x.png 2x" type="image/png" media="(min-width: 768px)">
+              <img class="catalog-item__img" src="images/catalog/slim-rice-500-mobile@1x.png" srcset="images/catalog/slim-rice-500-mobile@2x.png 2x" width="140" height="107" loading="lazy" alt="">
             </picture>
           </a>
-          <dl class="catalog-item__parameters">
-            <div class="catalog-item__parameter">
-              <dt class="catalog-item__parameter-name">Масса</dt>
-              <dd class="catalog-item__parameter-value">500 г.</dd>
+          <dl class="catalog-item__parameters parameters-list">
+            <div class="parameters-list__item">
+              <dt class="parameters-list__name">Масса</dt>
+              <dd class="parameters-list__value">500 г.</dd>
             </div>
-            <div class="catalog-item__parameter">
-              <dt class="catalog-item__parameter-name">Вкус</dt>
-              <dd class="catalog-item__parameter-value">Рис</dd>
+            <div class="parameters-list__item">
+              <dt class="parameters-list__name">Вкус</dt>
+              <dd class="parameters-list__value">Рис</dd>
             </div>
-            <div class="catalog-item__parameter">
-              <dt class="catalog-item__parameter-name">Цена</dt>
-              <dd class="catalog-item__parameter-value">500 Р.</dd>
+            <div class="parameters-list__item">
+              <dt class="parameters-list__name">Цена</dt>
+              <dd class="parameters-list__value">500 Р.</dd>
             </div>
           </dl>
           <a class="catalog-item__action button" href="#">Заказать</a>
@@ -283,12 +283,12 @@
       </div>
       <div class="contact__map map">
         <picture>
-          <source srcset="images/map-l@1x.webp, img/map-l@2x.webp 2x" type="image/webp" media="(min-width: 1280px)">
-          <source srcset="images/map-m@1x.webp, img/map-m@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
-          <source srcset="images/map-s@1x.webp, img/map-s@2x.webp 2x" type="image/webp">
-          <source srcset="images/map-l@1x.jpg, img/map-l@2x.jpg 2x" type="image/jpg" media="(min-width: 1280px)">
-          <source srcset="images/map-m@1x.jpg, img/map-m@2x.jpg 2x" type="image/jpg" media="(min-width: 768px)">
-          <img class="map__img" src="images/map-s@1x.jpg" srcset="images/map-s@2x.jpg 2x" width="320" height="362" loading="lazy" alt="Офис «Кэт енерджи» на карте.">
+          <source srcset="images/map-desktop@1x.webp, images/map-desktop@2x.webp 2x" type="image/webp" media="(min-width: 1280px)">
+          <source srcset="images/map-tablet@1x.webp, images/map-tablet@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
+          <source srcset="images/map-mobile@1x.webp, images/map-mobile@2x.webp 2x" type="image/webp">
+          <source srcset="images/map-desktop@1x.jpg, images/map-desktop@2x.jpg 2x" type="image/jpg" media="(min-width: 1280px)">
+          <source srcset="images/map-tablet@1x.jpg, images/map-tablet@2x.jpg 2x" type="image/jpg" media="(min-width: 768px)">
+          <img class="map__img" src="images/map-mobile@1x.jpg" srcset="images/map-mobile@2x.jpg 2x" width="320" height="362" loading="lazy" alt="Офис «Кэт енерджи» на карте.">
         </picture>
       </div>
     </section>

@@ -1,0 +1,12 @@
+.section-title {
+  font-family: $accent-font;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+
+  color: $text-color-accent;
+
+  &--contrast {
+    color: inherit;
+  }
+}

@@ -1,0 +1,24 @@
+.creators {
+  color: $text-color-main;
+  text-decoration: none;
+
+  &:hover::after {
+    background-color: $bg-color-accent;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::after {
+    content: "";
+
+    display: block;
+    width: 27px;
+    height: 34px;
+    margin-left: 22px;
+
+    background-color: currentColor;
+    mask: url("../../icons/stack.svg#logo-academy") no-repeat center / cover;
+  }
+}
