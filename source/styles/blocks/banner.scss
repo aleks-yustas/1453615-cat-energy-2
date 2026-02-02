@@ -1,10 +1,88 @@
 .banner {
-  background-color: $bg-color-main;
-  background-image: linear-gradient(to bottom, $bg-color-accent 0, $bg-color-accent 302px, transparent 302px, transparent 100%);
-  background-position: center top, center top;
-  background-size: auto, 100% 100%;
-  background-repeat: no-repeat;
+  position: relative;
+
+  @media (width >= $desktop-width) {
+    position: static;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+
+    display: block;
+    width: 100%;
+    height: 302px;
+
+    background-color: $bg-color-main;
+    background-image: linear-gradient(to bottom, $bg-color-accent 0, $bg-color-accent 100%);
+    background-position: center top;
+    background-size: 100% 302px;
+    background-repeat: no-repeat;
+
+    @media ($tablet-width <= width < $desktop-width) {
+      display: none;
+    }
+
+    @media (width >= $desktop-width) {
+      top: 0;
+      left: 50%;
+      z-index: -1;
+
+      display: block;
+      width: 50vw;
+      height: 696px;
+    }
+  }
 }
+
+.banner__container {
+  position: relative;
+  z-index: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (--not-narrow-vp) {
+    align-items: flex-start;
+    background-image: none;
+  }
+
+  @media (--wide-vp) {
+    padding-top: 32px;
+    padding-bottom: 54px;
+  }
+}
+
+.banner__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (width >= $tablet-width) {
+    margin-bottom: 3px;
+  }
+
+  @media ($tablet-width <= width < $desktop-width) {
+    z-index: -1;
+
+    order: 1;
+    align-self: center;
+    margin-top: -83px;
+  }
+
+  @media (width >= $desktop-width) {
+    position: absolute;
+    top: 0;
+    right: 220px;
+  }
+}
+
 
 .banner__content {
   font-family: $accent-font;
@@ -18,6 +96,13 @@
   font-size: 36px;
   line-height: 36px;
   color: inherit;
+
+  @media (width >= $tablet-width) {
+    margin-bottom: 41px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .banner__text {
@@ -25,4 +110,24 @@
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
+
+  @media (width >= $tablet-width) {
+    margin-bottom: 49px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.banner__link {
+  width: 100%;
+
+  @media (width >= #{$tablet-width}) {
+    width: 244px;
+  }
+
+  @media (width >= #{$desktop-width}) {
+    margin-left: 80px;
+    margin-bottom: 185px;
+  }
 }

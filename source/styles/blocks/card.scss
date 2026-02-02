@@ -1,3 +1,25 @@
+.card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+  padding-bottom: 0;
+
+  background-color: $bg-color-lighten;
+
+  @media (width >= #{$tablet-width}) {
+    min-height: 372px;
+    padding: 53px 316px 53px 77px;
+  }
+
+  @media (width >= #{$desktop-width}) {
+    padding: 47px 50px 55px 52px;
+  }
+}
+
 .card__title {
   position: relative;
 
@@ -11,19 +33,50 @@
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
-  color: text-color-accent;
+  color: $text-color-accent;
+
+  @media (#{$tablet-width} <= width < #{$desktop-width}) {
+    position: static;
+
+    margin-bottom: 24px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (width >= #{$desktop-width}) {
+    margin-bottom: 40px;
+  }
 
   &::before {
+    --module-card-icon-size: 50px;
+
     content: "";
 
     flex-shrink: 1;
     display: block;
-    width: 50px;
-    height: 50px;
+    width: var(--module-card-icon-size);
+    height: var(--module-card-icon-size);
     margin-right: 18px;
     border-radius: 50%;
 
     background-color: $bg-color-accent;
+
+    @media (#{$tablet-width} <= width < #{$desktop-width}) {
+      --module-card-icon-size: 200px;
+
+      position: absolute;
+      top: 90px;
+      right: 62px;
+
+      margin-right: 0;
+    }
+
+    @media (width >= #{$desktop-width}) {
+      --module-card-icon-size: 100px;
+
+      margin-right: 62px;
+    }
   }
 
   &::after {
@@ -45,6 +98,23 @@
 
     width: 36px;
     height: 50px;
+
+    @media (#{$tablet-width} <= width < #{$desktop-width}) {
+      top: 81px;
+      right: 92px;
+      left: initial;
+
+      width: 140px;
+      height: 194px;
+    }
+
+    @media (width >= #{$desktop-width}) {
+      top: -6px;
+      left: 15px;
+
+      width: 70px;
+      height: 97px;
+    }
   }
 
   &--pro::after {
@@ -55,12 +125,37 @@
 
     width: 67px;
     height: 28px;
+
+    @media (#{$tablet-width} <= width < #{$desktop-width}) {
+      top: 135px;
+      right: 28px;
+      left: initial;
+
+      width: 268px;
+      height: 112px;
+    }
+
+    @media (width >= #{$desktop-width}) {
+      top: 20px;
+      left: -19px;
+
+      width: 134px;
+      height: 56px;
+    }
   }
 }
 
 .card__text {
   font-family: $main-font;
   color: $text-color-main;
+
+  @media (#{$tablet-width} <= width < #{$desktop-width}) {
+    margin-bottom: 48px;
+  }
+
+  @media (width >= #{$desktop-width}) {
+    margin-bottom: 23px;
+  }
 }
 
 .card__link {
@@ -77,6 +172,14 @@
   text-transform: uppercase;
   text-decoration: none;
   color: $text-color-accent;
+
+  @media (width >= #{$tablet-width}) {
+    margin-top: auto;
+    border-top: none;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
 
   &:hover {
     opacity: 0.3;

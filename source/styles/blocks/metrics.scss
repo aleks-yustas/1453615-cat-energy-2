@@ -1,3 +1,97 @@
 .metrics {
-  font-family: inherit;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px 34px;
+  margin-top: 0;
+  margin-bottom: 40px;
+
+  @media (width >= #{$tablet-width}) {
+    grid-template-columns: 162px 162px 1fr;
+    column-gap: 42px;
+    margin-bottom: 85px;
+  }
+
+  @media (width >= #{$desktop-width}) {
+    grid-template-columns: repeat(2, 162px);
+    row-gap: 60px;
+    margin-bottom: 0;
+  }
+}
+
+.metrics__item:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+
+  @media (#{$tablet-width} <= width < #{$desktop-width}) {
+    grid-column: auto;
+  }
+}
+
+.metric__name--bordered {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+
+  min-width: 87px;
+  padding: 0 10px;
+
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  text-transform: lowercase;
+
+  background-color: $bg-color-dark;
+  transform: translate(-50%, -50%);
+
+  @media (width >= #{$tablet-width}) {
+    min-width: 142px;
+    padding: 0 6px;
+
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  @media (#{$tablet-width} <= width < #{$desktop-width}) {
+    background-color: $bg-color-main;
+  }
+}
+
+.metric__count--bordered {
+  margin: 0;
+
+  font-family: $accent-font;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  color: $text-color-accent;
+
+  @media (width >= #{$tablet-width}) {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.metric--texted {
+  font-family: $accent-font;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $text-color-accent;
+
+  @media (width >= #{$tablet-width}) {
+    font-size: 20px;
+  }
+
+  @media (#{$tablet-width} <= width < #{$desktop-width}) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  @media (width >= #{$desktop-width}) {
+    text-align: left;
+  }
 }

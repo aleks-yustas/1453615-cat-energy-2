@@ -7,8 +7,40 @@
 
   word-wrap: break-word;
   overflow-wrap: break-word;
+
+  @media (min-width: #{$tablet-width}) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .page__body {
   margin: 0;
+}
+
+.page__title {
+  margin-bottom: 40px;
+
+  @media (min-width: #{$tablet-width}) {
+    margin-bottom: 0;
+  }
+
+  &--form {
+    @media (max-width: #{$tablet-width}) {
+      margin-bottom: 66px;
+    }
+  }
+}
+
+.page__centerer {
+  padding-inline: 20px;
+
+  @media (#{$tablet-width} <= width < #{$desktop-width}) {
+    padding-inline: 30px;
+  }
+
+  @media (width >= #{$desktop-width}) {
+    width: 1220px;
+    margin: 0 auto;
+  }
 }

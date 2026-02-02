@@ -1,9 +1,15 @@
 .catalog-list {
-  padding: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
 
-  list-style-type: none;
-}
+  @media (width >= #{$tablet-width}) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+  }
 
-.catalog-list__item {
-  margin-bottom: 40px;
+  @media (width >= #{$desktop-width}) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 80px 63px;
+  }
 }

@@ -1,6 +1,17 @@
 .creators {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 22px 0;
+
   color: $text-color-main;
   text-decoration: none;
+
+  @media (width >= #{$tablet-width}) {
+    justify-content: flex-end;
+    padding: 0;
+  }
 
   &:hover::after {
     background-color: $bg-color-accent;

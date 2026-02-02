@@ -1,3 +1,77 @@
 .logo {
-  font-family: inherit;
+  flex-grow: 1;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0 16px;
+
+  text-decoration: none;
+
+  &[aria-current="page"] {
+    pointer-events: none;
+  }
+
+  @media (width >= #{$tablet-width}) {
+    flex-grow: 0;
+    justify-content: flex-start;
+    width: 174px;
+    height: 52px;
+    padding: 0;
+  }
+
+  @media (width >= #{$desktop-width}) {
+    width: 202px;
+    height: 60px;
+  }
+
+  &--footer {
+    display: flex;
+    justify-content: center;
+    padding: 39px 20px 32px;
+
+    .logo__image {
+      width: 128px;
+      height: 24px;
+    }
+
+    @media (width >= #{$tablet-width}) {
+      justify-content: flex-start;
+      padding: 0;
+
+      text-align: left;
+    }
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &::after {
+    @media (--narrow-vp) {
+      content: "";
+
+      width: 34px;
+    }
+  }
+}
+
+.logo__image {
+  width: 34px;
+  height: 38px;
+
+  @media (--not-narrow-vp) {
+    width: 60px;
+    height: 50px;
+    margin-right: 12px;
+  }
+
+  @media (--wide-vp) {
+    width: 70px;
+    height: 60px;
+  }
 }
