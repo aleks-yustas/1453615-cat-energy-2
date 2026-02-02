@@ -37,13 +37,14 @@
 }
 
 .catalog-item__title {
+  width: 60%;
   margin-bottom: 18px;
 
   font-family: $accent-font;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  color: text-color-dark;
+  color: $text-color-dark;
   text-align: left;
 
   @media (width >= #{$tablet-width}) {
@@ -55,6 +56,8 @@
   }
 
   @media (width >= #{$desktop-width}) {
+    width: 70%;
+
     line-height: 21px;
   }
 }

@@ -159,6 +159,7 @@
 }
 
 .card__link {
+  align-self: flex-start;
   display: flex;
   align-items: center;
   width: 100%;
@@ -173,6 +174,8 @@
   text-decoration: none;
   color: $text-color-accent;
 
+  transition: 0.08s linear all;
+
   @media (width >= #{$tablet-width}) {
     margin-top: auto;
     border-top: none;
@@ -181,7 +184,7 @@
     line-height: 30px;
   }
 
-  &:hover {
+  &:active {
     opacity: 0.3;
   }
 
@@ -189,11 +192,16 @@
     content: "";
 
     display: block;
-    width: 24px;
-    height: 10px;
+    width: 32px;
+    height: 11px;
     margin-left: 15px;
 
     background: $text-color-accent;
-    mask: url("../../icons/stack.svg#arrow") no-repeat left center / cover;
+    mask: url("../../icons/stack.svg#arrow") no-repeat -8px center / 32px 11px;
+    transition: 0.08s linear all;
+  }
+
+  &:hover::after {
+    mask-position: 0 center;
   }
 }
