@@ -88,60 +88,64 @@
       </ol>
     </section>
     <section class="result">
-      <h2 class="result__title section-title">Живой пример</h2>
-      <p class="result__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-      <dl class="result__list metrics">
-        <div class="metrics__item result-metric result-metric--bordered">
-          <dt class="result-metric__name">Снижение веса</dt>
-          <dd class="result-metric__count">5 кг</dd>
-        </div>
-        <div class="metrics__item result-metric result-metric--bordered">
-          <dt class="result-metric__name">Затрачено времени</dt>
-          <dd class="result-metric__count">60 дней</dd>
-        </div>
-        <div class="metrics__item result-metric result-metric--texted">
-          <dt class="result-metric__name">Затраты на питание</dt>
-          <dd class="result-metric__count">15 000 руб.</dd>
-        </div>
-      </dl>
-      <div class="compare">
-        <figure class="compare__images">
-          <figcaption class="visually-hidden">Сравнение внешнего вида кота до и после похудения</figcaption>
-          <div class="compare__image compare__image--before">
-            <picture>
-              <source srcset="images/cat-fat-tablet@1x.webp, images/cat-fat-tablet@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
-              <source srcset="images/cat-fat-mobile@1x.webp, images/cat-fat-mobile@2x.webp 2x" type="image/webp">
-              <source srcset="images/cat-fat-tablet@1x.png, images/cat-fat-tablet@2x.png 2x" type="image/png" media="(min-width: 768px)">
-              <img class="compare__img" src="images/cat-fat-mobile@1x.png" srcset="images/cat-fat-mobile@2x.png 2x" width="280" height="270" loading="lazy" alt="Кот до похудения.">
-            </picture>
+      <div class="page__centerer result__container">
+        <h2 class="result__title section-title">Живой пример</h2>
+        <p class="result__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+        <dl class="result__list metrics">
+          <div class="metrics__item result-metric result-metric--bordered">
+            <dt class="result-metric__name">Снижение веса</dt>
+            <dd class="result-metric__count">5 кг</dd>
           </div>
-          <div class="compare__image compare__image--after">
-            <picture>
-              <source srcset="images/cat-skinny-tablet@1x.webp, images/cat-skinny-tablet@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
-              <source srcset="images/cat-skinny-mobile@1x.webp, images/cat-skinny-mobile@2x.webp 2x" type="image/webp">
-              <source srcset="images/cat-skinny-tablet@1x.png, images/cat-skinny-tablet@2x.png 2x" type="image/png" media="(min-width: 768px)">
-              <img class="compare__img" src="images/cat-skinny-mobile@1x.png" srcset="images/cat-skinny-mobile@2x.png 2x" width="280" height="270" loading="lazy" alt="Кот после похудения.">
-            </picture>
+          <div class="metrics__item result-metric result-metric--bordered">
+            <dt class="result-metric__name">Затрачено времени</dt>
+            <dd class="result-metric__count">60 дней</dd>
           </div>
-        </figure>
-        <button class="compare__toggler" type="button">
-          <span class="visually-hidden">Сравнить</span>
-        </button>
+          <div class="metrics__item result-metric result-metric--texted">
+            <dt class="result-metric__name">Затраты на питание</dt>
+            <dd class="result-metric__count">15 000 руб.</dd>
+          </div>
+        </dl>
+        <div class="result__compare compare">
+          <figure class="compare__images">
+            <figcaption class="visually-hidden">Сравнение внешнего вида кота до и после похудения</figcaption>
+            <div class="compare__image compare__image--before">
+              <picture>
+                <source srcset="images/cat-fat-tablet@1x.webp, images/cat-fat-tablet@2x.webp 2x" type="image/webp" media="(min-width: 768px)" width="591" height="511">
+                <source srcset="images/cat-fat-mobile@1x.webp, images/cat-fat-mobile@2x.webp 2x" type="image/webp" width="280" height="232">
+                <source srcset="images/cat-fat-tablet@1x.png, images/cat-fat-tablet@2x.png 2x" type="image/png" media="(min-width: 768px)" width="591" height="511">
+                <img class="compare__img" src="images/cat-fat-mobile@1x.png" srcset="images/cat-fat-mobile@2x.png 2x" width="280" height="232" loading="lazy" alt="Кот до похудения.">
+              </picture>
+            </div>
+            <div class="compare__image compare__image--after">
+              <picture>
+                <source srcset="images/cat-skinny-tablet@1x.webp, images/cat-skinny-tablet@2x.webp 2x" type="image/webp" media="(min-width: 768px)" width="591" height="511">
+                <source srcset="images/cat-skinny-mobile@1x.webp, images/cat-skinny-mobile@2x.webp 2x" type="image/webp" width="280" height="232">
+                <source srcset="images/cat-skinny-tablet@1x.png, images/cat-skinny-tablet@2x.png 2x" type="image/png" media="(min-width: 768px)" width="591" height="511">
+                <img class="compare__img" src="images/cat-skinny-mobile@1x.png" srcset="images/cat-skinny-mobile@2x.png 2x" width="280" height="232" loading="lazy" alt="Кот после похудения.">
+              </picture>
+            </div>
+          </figure>
+          <button class="compare__toggler" type="button">
+            <span class="visually-hidden">Сравнить</span>
+          </button>
+        </div>
       </div>
     </section>
     <section class="contact">
-      <div class="contact__content">
+      <div class="contact__wrapper">
         <h2 class="contact__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
-        <p class="contact__place">ул. Большая Конюшенная, д. 19/8</p>
-        <p class="contact__city">Санкт-Петербург</p>
+        <address class="contact__address">
+          <p class="contact__place">ул. Большая Конюшенная, д. 19/8</p>
+          <p class="contact__city">Санкт-Петербург</p>
+        </address>
       </div>
       <div class="contact__map map">
         <picture>
-          <source srcset="images/map-desktop@1x.webp, images/map-desktop@2x.webp 2x" type="image/webp" media="(min-width: 1280px)">
-          <source srcset="images/map-tablet@1x.webp, images/map-tablet@2x.webp 2x" type="image/webp" media="(min-width: 768px)">
-          <source srcset="images/map-mobile@1x.webp, images/map-mobile@2x.webp 2x" type="image/webp">
-          <source srcset="images/map-desktop@1x.jpg, images/map-desktop@2x.jpg 2x" type="image/jpg" media="(min-width: 1280px)">
-          <source srcset="images/map-tablet@1x.jpg, images/map-tablet@2x.jpg 2x" type="image/jpg" media="(min-width: 768px)">
+          <source srcset="images/map-desktop@1x.webp, images/map-desktop@2x.webp 2x" type="image/webp" media="(min-width: 1280px)"  width="1440" height="400">
+          <source srcset="images/map-tablet@1x.webp, images/map-tablet@2x.webp 2x" type="image/webp" media="(min-width: 768px)"  width="768" height="400">
+          <source srcset="images/map-mobile@1x.webp, images/map-mobile@2x.webp 2x" type="image/webp" width="320" height="362">
+          <source srcset="images/map-desktop@1x.jpg, images/map-desktop@2x.jpg 2x" type="image/jpg" media="(min-width: 1280px)"  width="1440" height="400">
+          <source srcset="images/map-tablet@1x.jpg, images/map-tablet@2x.jpg 2x" type="image/jpg" media="(min-width: 768px)"  width="768" height="400">
           <img class="map__img" src="images/map-mobile@1x.jpg" srcset="images/map-mobile@2x.jpg 2x" width="320" height="362" loading="lazy" alt="Офис «Кэт енерджи» на карте.">
         </picture>
       </div>

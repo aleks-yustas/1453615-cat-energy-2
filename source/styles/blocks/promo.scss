@@ -11,12 +11,31 @@
   line-height: 20px;
   color: $text-color-contrast;
   text-decoration: none;
+  text-align: center;
 
   background-color: $bg-color-accent;
   background-image: url("../../images/gift-mobile@1x.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  @media (width >= #{$tablet-width}) {
+    flex-direction: row;
+    min-height: 200px;
+    padding: 57px 124px 60px 77px;
+  }
+
+  @media (#{$tablet-width} <= width < #{$desktop-width}) {
+    gap: 264px;
+    text-align: left;
+  }
+
+  @media (width >= #{$desktop-width}) {
+    flex-direction: column;
+    padding: 55px 40px 40px;
+
+    background-position: right center;
+  }
 
   &::before {
     content: "";

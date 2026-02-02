@@ -1,7 +1,43 @@
+.parameters-list {
+  width: 100%;
+}
+
 .parameters-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 6px;
+
   font-family: $main-font;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
   color: $text-color-main;
+
+  @media (width >= #{$tablet-width}) {
+    position: relative;
+
+    margin-bottom: 14px;
+  }
+
+  &::before {
+    margin-right: auto;
+    vertical-align: middle;
+  }
+
+  &::after {
+    @media (width >= #{$tablet-width}) {
+      content: "";
+
+      position: absolute;
+      right: 0;
+      bottom: -7px;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+      background-color: $border-color-darken;
+    }
+  }
 }
