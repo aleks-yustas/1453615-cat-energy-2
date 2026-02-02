@@ -6,6 +6,11 @@
 
   color: $text-color-accent;
 
+  @media (width >= #{$tablet-width}) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
   &--contrast {
     color: inherit;
   }

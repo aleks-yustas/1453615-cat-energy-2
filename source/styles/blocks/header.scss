@@ -1,3 +1,27 @@
-.header {
-  background-color: $bg-color-main;
+.main-header {
+  position: relative;
+
+  @media (width >= #{$tablet-width}) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 24px;
+    padding-bottom: 42px;
+  }
+
+  @media (width >= #{$desktop-width}) {
+    padding-top: 53px;
+    padding-bottom: 29px;
+  }
+}
+
+.header__logo {
+  flex-shrink: 0;
+}
+
+.header__nav {
+  @media (width >= #{$tablet-width}) {
+    flex-grow: 1;
+    padding-top: 18px;
+  }
 }
