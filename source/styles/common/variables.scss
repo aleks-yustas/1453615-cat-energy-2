@@ -22,13 +22,9 @@ $border-color-light: #e6e6e6;
 $border-color-lighten: #e7e7e7;
 $border-color-dark: #d9d9d9;
 $border-color-darken: #cdcdcd;
+$border-color-black: #444444;
+$border-color-alert: #ff8282;
 
 $mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1280px;
-
-// @custom-media --narrow-vp (width <= 767.9px);
-// @custom-media --not-narrow-vp (width >= 768px);  (width >= #{$tablet-width})
-// @custom-media --middle-vp (768px <= width < 1279.9px);
-// @custom-media --wide-vp (width >= 1280px); width >= #{$desktop-width}
-// @custom-media --not-wide-vp (width <= 1279.9px);
