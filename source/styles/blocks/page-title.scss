@@ -2,20 +2,13 @@
   font-family: $accent-font;
   color: $text-color-accent;
 
-  margin: 0;
-
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
 
   @media (width >= #{$tablet-width}) {
-    margin-bottom: 54px;
 
     font-size: 60px;
     line-height: 60px;
-  }
-
-  @media (width >= #{$desktop-width}) {
-    margin-bottom: 56px;
   }
 }

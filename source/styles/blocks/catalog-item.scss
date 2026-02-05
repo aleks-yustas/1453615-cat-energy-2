@@ -95,12 +95,18 @@
   text-decoration: none;
 }
 
+.catalog-item__parameters {
+  @media (width >= #{$tablet-width}) {
+    margin-bottom: 33px;
+  }
+}
+
 .catalog-item__action {
   grid-column: 1 / -1;
   width: 100%;
   margin-top: 13px;
 
   @media (width >= #{$tablet-width}) {
-    margin-top: 33px;
+    margin-top: auto;
   }
 }

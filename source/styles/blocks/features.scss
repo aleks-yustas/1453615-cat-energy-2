@@ -10,6 +10,10 @@
   @media (width >= #{$tablet-width}) {
     padding-bottom: 47px;
   }
+
+  @media (width >= #{$desktop-width}) {
+    padding-bottom: 69px;
+  }
 }
 
 .features__title {
