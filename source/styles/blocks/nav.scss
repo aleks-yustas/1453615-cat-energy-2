@@ -6,15 +6,20 @@
 
   font-family: $accent-font;
 
-  @media (width = #{$tablet-width}) {
+  @media (width < #{$tablet-width}) {
     border-bottom: 1px solid $border-color-light;
     box-shadow: 30px 0 0 0 $border-color-light, -30px 0 0 0 $border-color-light;
   }
 
-  @media (min-width: #{$desktop-width}) {
-    padding: 0;
+  @media (width >= #{$tablet-width}) {
+    grid-template-columns: auto;
+    padding-top: 14px;
 
     background: none;
+  }
+
+  @media (width >= #{$desktop-width}) {
+    padding: 0;
   }
 
   &--no-js {
@@ -45,27 +50,27 @@
 
   list-style-type: none;
 
-  @media (min-width: #{$tablet-width}) {
+  @media (width >= #{$tablet-width}) {
+    position: static;
+
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
-    margin-left: 20px;
+    gap: 33px;
   }
 
   &--closed {
-    display: none;
+    @media (width < #{$tablet-width}) {
+      display: none;
+    }
   }
 }
 
 .nav__item {
   background-color: $bg-color-main;
 
-  @media (min-width: #{$tablet-width}) {
+  @media (width >= #{$tablet-width}) {
     background: none;
-
-    &:not(:first-child) {
-      margin-left: 35px;
-    }
   }
 }
 
@@ -83,7 +88,7 @@
   text-decoration: none;
   text-transform: uppercase;
 
-  @media (min-width: #{$tablet-width}) {
+  @media (width >= #{$tablet-width}) {
     position: relative;
 
     padding: 0;
@@ -106,10 +111,15 @@
 
       background-color: $bg-color-accent;
     }
+
+    @media (width >= #{$desktop-width}) {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 
   &::before {
-    @media (max-width: #{$tablet-width}) {
+    @media (width < #{$tablet-width}) {
       content: "";
 
       position: absolute;
@@ -142,6 +152,10 @@
 
   background-color: $bg-color-main;
   cursor: pointer;
+
+  @media (width >= #{$tablet-width}) {
+    display: none;
+  }
 
   &::before {
     content: "";
@@ -191,5 +205,15 @@
 
     box-shadow: 0 8px 0 0 $text-color-accent;
     transform: none;
+  }
+}
+
+.nav--index .nav__link {
+  @media (width >= #{$desktop-width}) {
+    color: $text-color-contrast;
+
+    &[aria-current="page"]::after {
+      background-color: $bg-color-main;
+    }
   }
 }

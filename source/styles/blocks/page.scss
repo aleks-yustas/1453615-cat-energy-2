@@ -44,3 +44,10 @@
     margin: 0 auto;
   }
 }
+
+.page__header {
+  @media (width >= #{$desktop-width}) {
+    width: 1220px;
+    margin: 0 auto;
+  }
+}

@@ -21,7 +21,7 @@
         <img class="logo__text" src="images/logo-text-additional.svg" width="101" height="18" alt="">
       </picture>
     </a>
-    <nav class="header__nav nav">
+    <nav class="header__nav nav nav--no-js">
       <button class="nav__toggler" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -275,6 +275,17 @@
       </ul>
       <p class="additional__promo promo">Закажите все и&nbsp;получите чехол&nbsp;для кота в&nbsp;подарок!</p>
     </section>
+    <section class="page__centerer subscribe">
+      <h2 class="subscribe__title section-title">Акции и новинки</h2>
+      <p class="subscribe__text">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
+      <form class="subscribe__form form" action="https://echo.htmlacademy.ru/" method="post">
+        <label class="form__input text-input">
+          <span class="visually-hidden">E-mail:</span>
+          <input class="text-input__field" id="subscribe-email" type="email" name="subscribe_email" placeholder="kuklachev@gmail.com">
+        </label>
+        <button class="form__submit button" type="submit">Подписаться</button>
+      </form>
+    </section>
     <section class="contact">
       <div class="contact__wrapper contact__wrapper--inner">
         <h2 class="contact__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
@@ -326,6 +337,7 @@
       </a>
     </div>
   </footer>
+  <script src="scripts/index.js" type="module"></script>
 </body>
 
 </html>

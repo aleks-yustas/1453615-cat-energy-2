@@ -1,97 +1,114 @@
 .banner {
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 20px;
+  padding-top: 27px;
 
-  @media (width >= $desktop-width) {
-    position: static;
-  }
-
-  &::before {
-    content: "";
-
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 0;
-
-    display: block;
-    width: 100%;
-    height: 302px;
-
-    background-color: $bg-color-main;
-    background-image: linear-gradient(to bottom, $bg-color-accent 0, $bg-color-accent 100%);
-    background-position: center top;
-    background-size: 100% 302px;
-    background-repeat: no-repeat;
-
-    @media ($tablet-width <= width < $desktop-width) {
-      display: none;
-    }
-
-    @media (width >= $desktop-width) {
-      top: 0;
-      left: 50%;
-      z-index: -1;
-
-      display: block;
-      width: 50vw;
-      height: 696px;
-    }
-  }
-}
-
-.banner__container {
-  position: relative;
-  z-index: 0;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @media (--not-narrow-vp) {
-    align-items: flex-start;
-    background-image: none;
-  }
-
-  @media (--wide-vp) {
-    padding-top: 32px;
-    padding-bottom: 54px;
-  }
-}
-
-.banner__image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @media (width >= $tablet-width) {
-    margin-bottom: 3px;
-  }
-
-  @media ($tablet-width <= width < $desktop-width) {
-    z-index: -1;
-
-    order: 1;
-    align-self: center;
-    margin-top: -83px;
-  }
-
-  @media (width >= $desktop-width) {
-    position: absolute;
-    top: 0;
-    right: 220px;
-  }
-}
-
-
-.banner__content {
   font-family: $accent-font;
   font-weight: 400;
   text-align: center;
   color: $text-color-contrast;
+
+  @media (width < #{$tablet-width}) {
+    background-image:
+      linear-gradient(
+        to top,
+        $bg-color-main 39.6%,
+        rgba($bg-color-accent, 0.85) 39.6%
+      ),
+      image-set(
+        url("../../images/bg-banner-mobile@2x.webp") 2dppx type("image/webp"),
+        url("../../images/bg-banner-mobile@1x.webp") 1dppx type("image/webp"),
+        url("../../images/bg-banner-mobile@2x.jpg") 2dppx,
+        url("../../images/bg-banner-mobile@1x.jpg") 1dppx
+      ),
+      linear-gradient(
+        to top,
+        $bg-color-main 39.6%,
+        #504f55 39.6%
+      );
+    background-position: center top, center top;
+    background-size: 100%, auto 60.4%;
+    background-repeat: no-repeat;
+  }
+
+  @media (width >= #{$tablet-width}) {
+    position: relative;
+
+    padding-bottom: 526px;
+
+    color: $text-color-accent;
+    text-align: left;
+  }
+
+  @media (width >= #{$desktop-width}) {
+    position: static;
+
+    grid-template-columns: 416px 1fr;
+    padding-left: 80px;
+    padding-bottom: 0;
+  }
+
+  &::before {
+    @media (width >= #{$desktop-width}) {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 50%;
+      z-index: -1;
+
+      width: 50%;
+      height: 693px;
+
+      background-image:
+        linear-gradient(rgba($bg-color-accent, 0.85)),
+        image-set(
+          url("../../images/bg-banner-desktop@2x.webp") 2dppx type("image/webp"),
+          url("../../images/bg-banner-desktop@1x.webp") 1dppx type("image/webp"),
+          url("../../images/bg-banner-desktop@2x.jpg") 2dppx,
+          url("../../images/bg-banner-desktop@1x.jpg") 1dppx
+        ),
+        linear-gradient(#504f55);
+      background-position: right bottom;
+      background-size: 100%, cover, 100%;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.banner__picture {
+  width: 100%;
+  height: auto;
+
+  text-align: center;
+
+  @media (width >= #{$tablet-width}) {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: -1;
+
+    transform: translateX(-50%);
+  }
+
+  @media (width >= $desktop-width) {
+    position: static;
+    grid-column: 2;
+    grid-row: 1 / 5;
+    place-self: center start;
+    width: auto;
+    margin-left: -48px;
+
+    text-align: left;
+    transform: none;
+  }
 }
 
 .banner__title {
+  margin-top: 0;
+  margin-bottom: 25px;
+
   font-weight: inherit;
   font-size: 36px;
   line-height: 36px;
@@ -99,13 +116,17 @@
 
   @media (width >= $tablet-width) {
     margin-bottom: 41px;
+  }
 
-    font-size: 60px;
-    line-height: 60px;
+  @media (width >= #{$desktop-width}) {
+    grid-column: 1;
   }
 }
 
 .banner__text {
+  margin-top: 0;
+  margin-bottom: 29px;
+
   font-weight: inherit;
   font-size: 14px;
   line-height: 14px;
@@ -117,17 +138,24 @@
     font-size: 20px;
     line-height: 20px;
   }
+
+  @media (width >= #{$desktop-width}) {
+    grid-column: 1;
+  }
 }
 
-.banner__link {
+.banner__action {
   width: 100%;
 
   @media (width >= #{$tablet-width}) {
+    grid-row: 4;
     width: 244px;
   }
 
   @media (width >= #{$desktop-width}) {
-    margin-left: 80px;
-    margin-bottom: 185px;
+    grid-column: 1;
+    grid-row: auto;
+    place-self: start;
+    margin: 0;
   }
 }
