@@ -1,10 +1,8 @@
 .logo {
-  flex-grow: 1;
-  flex-shrink: 0;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 101px 1fr;
   align-items: center;
-  padding: 12px 0 16px;
+  padding: 12px 20px 16px;
 
   text-decoration: none;
 
@@ -61,8 +59,8 @@
 }
 
 .logo__image {
-  width: 34px;
-  height: 38px;
+  justify-self: start;
+  display: block;
 
   @media (--not-narrow-vp) {
     width: 60px;
@@ -74,4 +72,8 @@
     width: 70px;
     height: 60px;
   }
+}
+
+.logo__text {
+  display: block;
 }

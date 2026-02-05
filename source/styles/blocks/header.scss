@@ -1,5 +1,9 @@
-.main-header {
+.header {
   position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 66px;
 
   @media (width >= #{$tablet-width}) {
     display: flex;
@@ -16,10 +20,15 @@
 }
 
 .header__logo {
-  flex-shrink: 0;
+  grid-column: 1 / -1;
+  grid-row: 1;
+  align-self: flex-start;
 }
 
 .header__nav {
+  grid-column: 1 / -1;
+  grid-row: 1;
+
   @media (width >= #{$tablet-width}) {
     flex-grow: 1;
     padding-top: 18px;
