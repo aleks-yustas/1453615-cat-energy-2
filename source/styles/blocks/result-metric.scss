@@ -1,17 +1,16 @@
 .result-metric--bordered {
-  position: relative;
-
-  padding: 15px;
-  padding-bottom: 18px;
-  border: 1px solid $border-color-darken;
-  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content;
 
   .result-metric__name {
-    position: absolute;
-    top: 100%;
-    left: 50%;
+    position: relative;
+    z-index: 2;
 
+    grid-row: 2;
+    justify-self: center;
     width: 87px;
+    margin-top: -0.5em;
     padding: 0 10px;
 
     font-size: 12px;
@@ -20,7 +19,6 @@
     text-transform: lowercase;
 
     background-color: $bg-color-dark;
-    transform: translate(-50%, -10px);
 
     @media (#{$tablet-width} <= width < #{$desktop-width}) {
       background-color: $bg-color-main;
@@ -36,7 +34,12 @@
   }
 
   .result-metric__count {
+    grid-row: 1;
+    padding: 15px;
     margin: 0;
+    padding-bottom: 18px;
+    border: 1px solid #{$border-color-darken};
+    border-radius: 4px;
 
     font-family: $accent-font;
     font-weight: 500;

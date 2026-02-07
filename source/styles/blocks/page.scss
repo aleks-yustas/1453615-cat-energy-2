@@ -21,14 +21,12 @@
 .page__title {
   margin-bottom: 40px;
 
-  @media (min-width: #{$tablet-width}) {
-    margin-bottom: 0;
+  @media (width >= #{$tablet-width}) {
+    margin-bottom: 54px;
   }
 
-  &--form {
-    @media (max-width: #{$tablet-width}) {
-      margin-bottom: 66px;
-    }
+  @media (width >= #{$desktop-width}) {
+    margin-bottom: 56px;
   }
 }
 
@@ -41,6 +39,49 @@
 
   @media (width >= #{$desktop-width}) {
     width: 1220px;
+    margin-inline: auto;
+  }
+}
+
+.page__header {
+  @media (width >= #{$desktop-width}) {
+    width: 1220px;
     margin: 0 auto;
+  }
+}
+
+.page__modules {
+  margin-bottom: 20px;
+
+  @media (width >= #{$tablet-width}) {
+    margin-bottom: 45px;
+  }
+
+  @media (width >= #{$desktop-width}) {
+    margin-bottom: 71px;
+  }
+}
+
+.page__catalog {
+  margin-bottom: 25px;
+
+  @media (width >= #{$tablet-width}) {
+    margin-bottom: 74px;
+  }
+
+  @media (width >= #{$desktop-width}) {
+    margin-bottom: 71px;
+  }
+}
+
+.page__additional {
+  margin-bottom: 40px;
+
+  @media (width >= #{$tablet-width}) {
+    margin-bottom: 80px;
+  }
+
+  @media (width >= #{$desktop-width}) {
+    margin-bottom: 96px;
   }
 }

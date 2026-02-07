@@ -45,7 +45,7 @@
 
   &--inner {
     @media (width < #{$desktop-width}) {
-      --contact-bg-color: $bg-color-lighten;
+      --contact-bg-color: #{$bg-color-lighten};
     }
   }
 }

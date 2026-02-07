@@ -17,7 +17,7 @@
 }
 
 .footer__item {
-  @media (width <= #{$tablet-width}) {
+  @media (width < #{$tablet-width}) {
     width: 100%;
 
     &:not(:last-child) {

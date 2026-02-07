@@ -1,6 +1,5 @@
 .button {
   display: block;
-  width: fit-content;
   padding: 10px 20px;
   border: none;
 
@@ -15,4 +14,36 @@
 
   background-color: $bg-color-accent;
   cursor: pointer;
+
+  @media (width >= #{$tablet-width}) {
+    padding: 17px 20px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  &:hover {
+    background-color: $bg-color-accent-bright;
+  }
+
+  &:active {
+    color: rgba($text-color-contrast, 0.3);
+
+    background-color: $bg-color-accent-bright;
+  }
+
+  &--secondary {
+    color: $text-color-main;
+    background-color: $bg-color-lighten;
+
+    &:hover {
+      background-color: $bg-color-light;
+    }
+
+    &:active {
+      color: rgba($text-color-main, 0.3);
+
+      background-color: $bg-color-light;
+    }
+  }
 }

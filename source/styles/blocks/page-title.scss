@@ -1,27 +1,14 @@
 .page-title {
   font-family: $accent-font;
   color: $text-color-accent;
-}
 
-.page-title__header {
-  margin: 0;
-
-  font-family: inherit;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
-}
 
-.page-title__text {
-  margin: 0;
+  @media (width >= #{$tablet-width}) {
 
-  font-family: inherit;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-}
-
-.page-title__header + .page-title__text {
-  margin-top: 37px;
+    font-size: 60px;
+    line-height: 60px;
+  }
 }

@@ -6,6 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Каталог продукции | Кэт энерджи | HTML Academy</title>
   <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 
 <body class="page__body">
@@ -21,7 +27,7 @@
         <img class="logo__text" src="images/logo-text-additional.svg" width="101" height="18" alt="">
       </picture>
     </a>
-    <nav class="header__nav nav">
+    <nav class="header__nav nav nav--no-js">
       <button class="nav__toggler" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -39,8 +45,8 @@
     </nav>
   </header>
   <main class="page__main">
-    <h1 class="page__title page-title">Каталог продукции</h1>
-    <section class="page__centerer catalog">
+    <h1 class="page__centerer page__title page-title">Каталог продукции</h1>
+    <section class="page__catalog page__centerer catalog">
       <h2 class="visually-hidden">Основные товары</h2>
       <ul class="catalog__list catalog-list">
         <li class="catalog-list__item catalog-item">
@@ -241,12 +247,12 @@
         <li class="catalog-list__item catalog-all">
           <p class="catalog-all__title">Показать еще 100500 товаров</p>
           <p class="catalog-all__text">На самом деле вкусов гораздо больше!</p>
-          <a class="catalog-all__button button" href="#">Показать все</a>
+          <a class="catalog-all__button button button--secondary" href="#">Показать все</a>
         </li>
       </ul>
     </section>
-    <section class="page__centerer additional">
-      <h2 class="additional__title section-title">Дополнительные товары</h2>
+    <section class="page__additional page__centerer additional">
+      <h2 class="additional__title section-title section-title--decoration">Дополнительные товары</h2>
       <ul class="additional__list">
         <li class="additional__item additional-item">
           <h3 class="additional-item__title">Сахарозаменитель</h3>
@@ -274,6 +280,17 @@
         </li>
       </ul>
       <p class="additional__promo promo">Закажите все и&nbsp;получите чехол&nbsp;для кота в&nbsp;подарок!</p>
+    </section>
+    <section class="page__centerer subscribe">
+      <h2 class="subscribe__title section-title  section-title--decoration">Акции и новинки</h2>
+      <p class="subscribe__text">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
+      <form class="subscribe__form form" action="https://echo.htmlacademy.ru/" method="post">
+        <label class="form__input text-input">
+          <span class="visually-hidden">E-mail:</span>
+          <input class="text-input__field" id="subscribe-email" type="email" name="subscribe_email" placeholder="kuklachev@gmail.com">
+        </label>
+        <button class="form__submit button" type="submit">Подписаться</button>
+      </form>
     </section>
     <section class="contact">
       <div class="contact__wrapper contact__wrapper--inner">
@@ -326,6 +343,7 @@
       </a>
     </div>
   </footer>
+  <script src="scripts/index.js" type="module"></script>
 </body>
 
 </html>
