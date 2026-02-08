@@ -12,12 +12,19 @@
     padding: 0;
   }
 
-  &:hover::after {
+  &:hover::after,
+  &:focus-visible::after {
     background-color: $bg-color-accent;
   }
 
   &:active {
     opacity: 0.3;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus::after {
+      background-color: $bg-color-accent;
+    }
   }
 
   &::after {

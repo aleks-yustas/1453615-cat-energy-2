@@ -81,7 +81,8 @@
 }
 
 .banner__picture {
-  display: block;
+  display: grid;
+  justify-content: center;
 
   @media (width >= $desktop-width) {
     grid-column: 2;
@@ -89,15 +90,12 @@
     place-self: center start;
     margin-left: -48px;
 
-    text-align: left;
     transform: none;
   }
 }
 
 .banner__image {
   display: block;
-
-  text-align: center;
 
   @media (width >= #{$tablet-width}) {
     position: absolute;
