@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 56px;
-  gap: 16px;
+  gap: 14px;
   align-items: stretch;
 
   @media (width >= #{$tablet-width}) {

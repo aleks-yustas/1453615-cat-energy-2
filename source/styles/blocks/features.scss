@@ -138,4 +138,8 @@
 
 .features__text {
   margin: 0;
+
+  @media (#{$tablet-width} <= width < #{$desktop-width}) {
+    width: 80%;
+  }
 }

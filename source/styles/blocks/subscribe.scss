@@ -17,7 +17,7 @@
     margin-block: 0 66px;
   }
 
-  @media (width >= #{$tablet-width}) {
+  @media (width >= #{$desktop-width}) {
     margin-block: 0 72px;
   }
 }

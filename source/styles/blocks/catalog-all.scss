@@ -40,6 +40,10 @@
 
       border: 1px solid #{$border-color-light};
     }
+
+    @media (width >= #{$desktop-width}) {
+      inset: 71px 0 0;
+    }
   }
 
   &::after {

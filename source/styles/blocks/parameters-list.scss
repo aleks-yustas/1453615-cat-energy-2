@@ -1,7 +1,6 @@
 .parameters-list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 6px;
 
   @media (width >= #{$tablet-width}) {
     justify-items: stretch;
