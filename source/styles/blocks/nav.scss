@@ -19,7 +19,7 @@
   }
 
   @media (width >= #{$desktop-width}) {
-    padding: 0;
+    padding: 14px 0 0;
   }
 
   &--no-js {
@@ -59,6 +59,10 @@
     gap: 33px;
   }
 
+  @media (width >= #{$tablet-width}) {
+    gap: 35px;
+  }
+
   &--closed {
     @media (width < #{$tablet-width}) {
       display: none;
@@ -87,6 +91,23 @@
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+
+  outline: none;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus {
+      opacity: 0.8;
+    }
+  }
 
   @media (width >= #{$tablet-width}) {
     position: relative;

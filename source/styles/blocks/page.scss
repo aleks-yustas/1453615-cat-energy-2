@@ -19,14 +19,15 @@
 }
 
 .page__title {
+  margin-top: 0;
   margin-bottom: 40px;
 
   @media (width >= #{$tablet-width}) {
-    margin-bottom: 54px;
+    margin-bottom: 84px;
   }
 
   @media (width >= #{$desktop-width}) {
-    margin-bottom: 56px;
+    margin-bottom: 95px;
   }
 }
 
@@ -40,18 +41,38 @@
   @media (width >= #{$desktop-width}) {
     width: 1220px;
     margin-inline: auto;
+    padding-inline: 0;
   }
 }
 
 .page__header {
+  display: grid;
+  grid-template-rows: 65px;
+
+  @media (width >= #{$tablet-width}) {
+    grid-template-rows: 50px;
+  }
+
   @media (width >= #{$desktop-width}) {
     width: 1220px;
     margin: 0 auto;
   }
 }
 
-.page__modules {
+.page__banner {
   margin-bottom: 20px;
+
+  @media (width >= #{$tablet-width}) {
+    margin-bottom: 0;
+  }
+
+  @media (width >= #{$desktop-width}) {
+    margin-bottom: 135px;
+  }
+}
+
+.page__modules {
+  margin-bottom: 22px;
 
   @media (width >= #{$tablet-width}) {
     margin-bottom: 45px;

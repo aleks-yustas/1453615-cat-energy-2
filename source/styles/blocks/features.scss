@@ -3,21 +3,22 @@
 
   background-color: $bg-color-main;
 
-  @media (#{$desktop-width} <= width < #{$desktop-width}) {
+  @media (#{$tablet-width} <= width < #{$desktop-width}) {
     border-bottom: 1px solid $border-color-light;
   }
 
   @media (width >= #{$tablet-width}) {
-    padding-bottom: 47px;
+    padding-bottom: 60px;
   }
 
   @media (width >= #{$desktop-width}) {
-    padding-bottom: 69px;
+    padding-bottom: 40px;
   }
 }
 
 .features__title {
-  margin-bottom: 40px;
+  margin-top: 0;
+  margin-bottom: 42px;
 
   @media (width >= #{$tablet-width}) {
     margin-bottom: 72px;
@@ -37,7 +38,7 @@
 
   @media (width >= #{$tablet-width}) {
     grid-template-columns: 1fr 1fr;
-    gap: 90px 90px;
+    gap: 90px 59px;
   }
 
   @media (width >= #{$desktop-width}) {
@@ -64,7 +65,13 @@
     flex-direction: column;
     align-items: flex-start;
     min-height: 227px;
+    padding-right: 60px;
   }
+
+  @media (width >= #{$tablet-width}) {
+    padding-right: 0;
+  }
+
 
   &::before {
     content: "";
@@ -93,7 +100,7 @@
 
       position: absolute;
       top: 0;
-      left: 120px;
+      left: 113px;
       z-index: -1;
 
       display: block;
@@ -120,5 +127,19 @@
 
   &--weight::before {
     --icon: url("../../icons/stack.svg#scales");
+  }
+
+  &:first-child::after {
+    @media (width >= #{$tablet-width}) {
+      left: 120px;
+    }
+  }
+}
+
+.features__text {
+  margin: 0;
+
+  @media (#{$tablet-width} <= width < #{$desktop-width}) {
+    width: 80%;
   }
 }

@@ -5,18 +5,17 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 20px;
-  padding-bottom: 0;
+  padding: 24px 20px 0;
 
   background-color: $bg-color-lighten;
 
   @media (width >= #{$tablet-width}) {
     min-height: 372px;
-    padding: 53px 316px 53px 77px;
+    padding: 77px 316px 20px 53px;
   }
 
   @media (width >= #{$desktop-width}) {
-    padding: 47px 50px 55px 52px;
+    padding: 47px 50px 37px 52px;
   }
 }
 
@@ -37,8 +36,10 @@
 
   @media (#{$tablet-width} <= width < #{$desktop-width}) {
     position: static;
+  }
 
-    margin-bottom: 24px;
+  @media (width >= #{$tablet-width}) {
+    margin-bottom: 25px;
 
     font-size: 36px;
     line-height: 36px;
@@ -146,15 +147,17 @@
 }
 
 .card__text {
+  margin: 0 0 22px;
+
   font-family: $main-font;
   color: $text-color-main;
 
   @media (#{$tablet-width} <= width < #{$desktop-width}) {
-    margin-bottom: 48px;
+    margin-bottom: 33px;
   }
 
   @media (width >= #{$desktop-width}) {
-    margin-bottom: 23px;
+    margin-bottom: 7px;
   }
 }
 
@@ -163,7 +166,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 15px 0 18px;
+  padding: 19px 0 22px;
   border-top: 1px solid $border-color-dark;
 
   font-family: $accent-font;
@@ -175,9 +178,9 @@
   color: $text-color-accent;
 
   transition: 0.08s linear all;
+  outline: none;
 
   @media (width >= #{$tablet-width}) {
-    margin-top: auto;
     border-top: none;
 
     font-size: 20px;
@@ -199,9 +202,20 @@
     background: $text-color-accent;
     mask: url("../../icons/stack.svg#arrow") no-repeat -8px center / 32px 11px;
     transition: 0.08s linear all;
+
+    @media (width >= #{$tablet-width}) {
+      margin-left: 25px;
+    }
   }
 
-  &:hover::after {
+  &:hover::after,
+  &:focus-visible::after {
     mask-position: 0 center;
+  }
+
+  @supports not selector(:focus-visible) {
+    &:focus::after {
+      mask-position: 0 center;
+    }
   }
 }

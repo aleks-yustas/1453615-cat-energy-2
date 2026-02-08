@@ -1,7 +1,6 @@
 .banner {
   display: grid;
   grid-template-columns: 1fr;
-  margin-bottom: 20px;
   padding-top: 27px;
 
   font-family: $accent-font;
@@ -10,11 +9,13 @@
   color: $text-color-contrast;
 
   @media (width < #{$tablet-width}) {
+    --gradient-part: 37%;
+
     background-image:
       linear-gradient(
         to top,
-        $bg-color-main 39.6%,
-        rgba($bg-color-accent, 0.85) 39.6%
+        $bg-color-main var(--gradient-part),
+        rgba($bg-color-accent, 0.85) var(--gradient-part)
       ),
       image-set(
         url("../../images/bg-banner-mobile@2x.webp") 2dppx type("image/webp"),
@@ -24,8 +25,8 @@
       ),
       linear-gradient(
         to top,
-        $bg-color-main 39.6%,
-        #504f55 39.6%
+        $bg-color-main var(--gradient-part),
+        #504f55 var(--gradient-part)
       );
     background-position: center top, center top;
     background-size: 100%, auto 60.4%;
@@ -35,6 +36,7 @@
   @media (width >= #{$tablet-width}) {
     position: relative;
 
+    padding-top: 65px;
     padding-bottom: 526px;
 
     color: $text-color-accent;
@@ -45,8 +47,9 @@
     position: static;
 
     grid-template-columns: 416px 1fr;
-    padding-left: 80px;
+    padding-top: 7px;
     padding-bottom: 0;
+    padding-left: 80px;
   }
 
   &::before {
@@ -59,7 +62,7 @@
       z-index: -1;
 
       width: 50%;
-      height: 693px;
+      height: 694px;
 
       background-image:
         linear-gradient(rgba($bg-color-accent, 0.85)),
@@ -70,7 +73,7 @@
           url("../../images/bg-banner-desktop@1x.jpg") 1dppx
         ),
         linear-gradient(#504f55);
-      background-position: right bottom;
+      background-position: left bottom;
       background-size: 100%, cover, 100%;
       background-repeat: no-repeat;
     }
@@ -78,10 +81,21 @@
 }
 
 .banner__picture {
-  width: 100%;
-  height: auto;
+  display: grid;
+  justify-content: center;
 
-  text-align: center;
+  @media (width >= $desktop-width) {
+    grid-column: 2;
+    grid-row: 1 / 5;
+    place-self: center start;
+    margin-left: -48px;
+
+    transform: none;
+  }
+}
+
+.banner__image {
+  display: block;
 
   @media (width >= #{$tablet-width}) {
     position: absolute;
@@ -94,11 +108,8 @@
 
   @media (width >= $desktop-width) {
     position: static;
-    grid-column: 2;
-    grid-row: 1 / 5;
-    place-self: center start;
+
     width: auto;
-    margin-left: -48px;
 
     text-align: left;
     transform: none;
@@ -118,7 +129,12 @@
     margin-bottom: 41px;
   }
 
+  @media (#{$tablet-width} <= width < #{$desktop-width}) {
+    margin-left: 90px;
+  }
+
   @media (width >= #{$desktop-width}) {
+    padding-top: 82px;
     grid-column: 1;
   }
 }
@@ -139,6 +155,10 @@
     line-height: 20px;
   }
 
+  @media (#{$tablet-width} <= width < #{$desktop-width}) {
+    margin-left: 90px;
+  }
+
   @media (width >= #{$desktop-width}) {
     grid-column: 1;
   }
@@ -146,10 +166,17 @@
 
 .banner__action {
   width: 100%;
+  margin-top: 3px;
 
   @media (width >= #{$tablet-width}) {
     grid-row: 4;
-    width: 244px;
+    width: 242px;
+    margin-top: 0;
+    margin-left: 90px;
+    padding: 14px 20px;
+
+    font-size: 20px;
+    line-height: 26px;
   }
 
   @media (width >= #{$desktop-width}) {

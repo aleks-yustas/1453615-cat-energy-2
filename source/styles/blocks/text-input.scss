@@ -3,14 +3,14 @@
 
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: stretch;
   width: 100%;
 
   font-family: $accent-font;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 24px;
-  text-transform: uppercase;
+  color: $text-color-main;
 
   @media (width >= #{$tablet-width}) {
     font-size: 20px;
@@ -21,7 +21,7 @@
 .text-input__field {
   width: 100%;
   margin: 0;
-  padding: 11px 17px;
+  padding: 11px 13px;
   border: none;
 
   font: inherit;
@@ -31,7 +31,7 @@
   box-shadow: inset 0 0 0 1px $border-color-lighten;
 
   @media (width >= #{$tablet-width}) {
-    padding: 11px 20px;
+    padding: 11px 13px;
   }
 
   &:hover {
@@ -41,18 +41,10 @@
   &:focus {
     box-shadow: inset 0 0 0 2px $border-color-black;
     outline: none;
-
-    & + .text-input__icon {
-      background: $bg-color-accent;
-    }
   }
 
-  &::placeholder {
-    color: inherit;
-    opacity: 1;
-  }
-
-  &--error {
+  &--error,
+  &:invalid {
     box-shadow: inset 0 0 0 2px $border-color-alert;
   }
 }
